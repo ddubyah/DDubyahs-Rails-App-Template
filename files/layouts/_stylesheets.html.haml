@@ -1,0 +1,13 @@
+-# font-kits
+= stylesheet_link_tag 'fontkits/3Dumb-fontfacekit/stylesheet', :cache => true
+= stylesheet_link_tag 'fontkits/DejaVu-Serif-fontfacekit/stylesheet', :cache => true
+= stylesheet_link_tag 'fontkits/Lexia/stylesheet', :cache => true
+
+-# CSS: implied media="all"
+= stylesheet_link_tag 'style', :media => 'all'
+
+-# Uncomment if you are specifically targeting less enabled mobile browsers
+-#= stylesheet_link_tag 'handheld', :media => 'handheld'
+
+-# Append your own using content_for :stylesheets
+= yield :stylesheets

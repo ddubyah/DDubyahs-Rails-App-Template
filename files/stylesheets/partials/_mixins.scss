@@ -1,0 +1,33 @@
+/* Put all your mixins here */   
+
+@mixin page-curl($shadow-color:rgba(0,0,0,0.3), $skew:15deg, $rotate:5deg, $hoff:8px, $voff:12px, $blur:10px){
+	position: relative;                            
+	 @include box-shadow($shadow-color, 0px, 0px,3px);
+
+	&:after {
+		z-index: -1;
+		position: absolute;
+		background: transparent;
+		width: 70%;
+		height: 55%;
+		content: '';
+		right: 10px;
+		bottom: 10px; 
+		@include box-shadow($shadow-color, $hoff, $voff, $blur);  
+		@include simple-transform(1, $rotate, 0, 0, $skew);
+	}        
+	
+	&:before {
+		z-index: -2;
+		position: absolute;
+		background: transparent;
+		width: 70%;
+		height: 55%;
+		content: '';
+		left: 10px;
+		bottom: 10px;  
+		@include box-shadow($shadow-color, -$hoff, $voff, $blur);  
+		@include simple-transform(1, -$rotate, 0, 0, -$skew);
+	} 
+}                      
+                        
