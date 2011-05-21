@@ -7,9 +7,10 @@ rvm_list = `rvm list`.gsub(Regexp.new("\e\\[.?.?.?m"), '')
 
 # ask if we'd like to create a custom gemset
 
-make_gemset = ask("Would you like to create and initialise a custom gemset? [yn]")
-
-if (make_gemset == "y")
+make_gemset = yes?("Would you like to create and initialise a custom gemset? [yn]".yellow)
+puts "making gemset? #{make_gemset}".yellow
+if (make_gemset)  
+	puts "Making gemset".magenta
  	current_ruby = rvm_list.match(/=> ([^ ]+)/)[1]
 	desired_ruby = ask("Which RVM Ruby would you like to use? [#{current_ruby}]".red)
 	desired_ruby = current_ruby if desired_ruby.blank?

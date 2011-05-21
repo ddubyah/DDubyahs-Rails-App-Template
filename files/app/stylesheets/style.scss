@@ -1,27 +1,35 @@
-@import "Compass";
-@import "partials/lessbase";
+@import "compass/css3";
+@import "compass/utilities";   
 
+@import "blueprint/colors"; 
+@import "blueprint/typography";
+
+@import "compass/reset";
 @import "partials/fonts";
 @import "partials/helpers";
 
 @import "partials/mixins";
+
 @import "partials/redefine";
-@import "partials/typography";
-                           
-@import "partials/visuals";
-@import "partials/grid";
+@import "partials/typography"; 
+
+@import "partials/grid";  
+
+@import "partials/elements";
+
+
 
 #container{
 
 }
-/*
+/*                 
 	Individual stylesheets for each developer.
 	If you're using a version control system like github, or svn, this helps avoid mergin errors.
 	You can add more developers in the /src/partials/ directory.
 	If you're working solo, you can just get rid of the next two lines and the two _dev1.scss and _dev2.scss partials
 */
-
-//@import "partials/dev2";
+@import "partials/dev1";
+@import "partials/dev2";
 
 @media all and (orientation:portrait) { 
 	

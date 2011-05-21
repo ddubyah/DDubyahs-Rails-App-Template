@@ -9,11 +9,12 @@ h1{
 	margin-bottom:1.5em;
 	
 }
-#main {
-	padding-left:24px;   
-	//@include border-radius;
-	background-color:rgb(250,250,250);
-}
+// #main {
+// 	padding: 12px 12px;  
+// 	//@include border-radius;   
+// 	background-color:rgb(250,250,250);   
+// 	
+// } 
 aside{                
 	font-family:'Lexia';
 	background-color:rgb(255,255,180);
@@ -23,19 +24,11 @@ aside{
 	}                       
 	
 }     
-
-aside,#main {
-	@include page-curl(rgba(0,0,100,0.3), 8deg, 3deg, 2px, 8px, 18px); 
-}     
-
-aside:hover, #main:hover {
-	@include page-curl(rgba(6,6,0,0.5), 8deg, 3deg, 2px, 8px, 2px);
-}    
-               
+            
 #footer {
 	clear:both;
 }
                        
 #site-switch{
 	float:right;
-}                                               
+}

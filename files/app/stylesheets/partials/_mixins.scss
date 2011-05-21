@@ -1,4 +1,6 @@
 /* Put all your mixins here */   
+                               
+@import "compass/css3/transform";
 
 @mixin page-curl($shadow-color:rgba(0,0,0,0.3), $skew:15deg, $rotate:5deg, $hoff:8px, $voff:12px, $blur:10px){
 	position: relative;                            
@@ -27,7 +29,7 @@
 		left: 10px;
 		bottom: 10px;  
 		@include box-shadow($shadow-color, -$hoff, $voff, $blur);  
-		@include simple-transform(1, -$rotate, 0, 0, -$skew);
+		@include simple-transform(1, -$rotate, 0, 0, -$skew); 
 	} 
 }                      
                         

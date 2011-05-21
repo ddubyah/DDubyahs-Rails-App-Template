@@ -7,28 +7,33 @@ cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
-	width: 896px; 
-	margin:0px auto;
+	width: 896px;
 	padding: 72px 48px 84px;
 	background: rgb(232,232,232);
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}              
+
+
+body {
+	margin: 0px auto;
+}      
+
+article {
+	width: 528px;
+	float: left;
+}              
+
+aside {
+	width: 344px;
+	float: right;
 }
+         
+// #main {
+// 	@include page-curl(rgba(0,0,100,0.3), 8deg, 2deg, 2px, 8px, 5px); 
+// }
 
-#main{
-	width:528px;
-	float:left;  
-	margin-bottom:24px; 
-	padding:1em;
-}            
 
-aside{
-	width:344px;
-	float:right;
-	margin-bottom:24px; 
-	padding:1em;
-}                  
-            
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
@@ -44,18 +49,9 @@ px      68    160    252    344    436    528    620    712    */
 		width: 712px;
 		padding: 48px 28px 60px;
 	}
-	#main{
-		width:436px;  
-		float:left;
-	}         
-
-	aside{
-		width:252px;
-	}
 }
 
 
-          
 
 /*		Mobile Layout: 320px.
 		Gutters: 24px.
@@ -65,34 +61,12 @@ px      68    160    252    344    436    528    620    712    */
 cols    1     2      3
 px      68    160    252    */
 
-@media only screen and (max-width: 767px) {  
-	// Slightly reducing font size to reduce need to scroll
+@media only screen and (max-width: 767px) {
 	
 	body {
 		width: 252px;
-		padding: 48px 34px 60px;   
-		font-size: 80%;
-	}           
- 	
-	aside, #main {
-		width:252px;
-		float:none;
-		font-size: 80%;
-	}        
-	
-	h1,h2,h3{
-		font-size:24px; 
-		line-height:24px; 
-		font-family:'2DumbRegular';
-	}            
-	
-	h2{
-		font-size:16px;
-	}                 
-	
-	h3 {
-		font-size:13px;
-	}
+		padding: 48px 34px 60px;
+	}              
 }
 
 
@@ -111,8 +85,18 @@ px      68    160    252    344    436    */
 		width: 436px;
 		padding: 36px 22px 48px;
 	}
-	aside, #main {
-		width:436px;
-		fload:none;
+	
+}/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
 	}
+	
 }

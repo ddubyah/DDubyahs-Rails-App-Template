@@ -52,10 +52,11 @@ puts "\n========================================================="
 puts " DDubyah's RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
+
 copy_static_file 'Gemfile' 
 apply "#{@partials}/_git.rb"
 apply "#{@partials}/_rvm.rb" 
 # apply jquery
 run "rails g jquery:install"
 apply "#{@partials}/_boilerplate.rb"    
-
+apply "#{@partials}/_replace_files.rb" 

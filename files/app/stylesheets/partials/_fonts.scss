@@ -21,20 +21,20 @@ ff-mono			: The default font to display code (monospaced)
 }
 */
 
-/*@include font-face("3Dumb", font-files('fonts/3Dumb-fontfacekit/3Dumb-webfont.woff','woff', 'fonts/3Dumb-fontfacekit/3Dumb-webfont.ttf', 'truetype'));      */
+
 
 /*
 Change this mixins to your preference
-*/                                  
+*/
 
 @mixin ff-text{
 	font-family: 'DejaVuSerifBook', sans-serif;
 }
 @mixin ff-heading{
-	font-family: '3DumbRegular',serif;
+	font-family: '3DumbRegular', sans-serif;
 }
 @mixin ff-decorative{
-	font-family: 'Lexia',cursive;
+	font-family: cursive;
 }
 @mixin ff-mono{
 	font-family: monospace;

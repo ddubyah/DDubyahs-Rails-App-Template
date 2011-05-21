@@ -1,6 +1,0 @@
-// fix broken $alt-text-color
-$alt-text-color: rgb(175,36,36);
-$fixed-font-family: "andale mono", "lucida console", monospace;
-@mixin fixed-width-text {
-  font: 1em $fixed-font-family;
-  line-height: 1.5; }
