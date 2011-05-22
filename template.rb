@@ -59,10 +59,10 @@ apply "#{@partials}/_rvm.rb"
 
 # apply jquery   
 puts "applying jquery".yellow
-yes? "Continue?"
+
 generate 'jquery:install'    
 #run "rails g jquery:install" 
-yes? "Continue?" 
+#yes? "Continue?" 
 
 apply "#{@partials}/_boilerplate.rb"    
 apply "#{@partials}/_replace_files.rb"     
