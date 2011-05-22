@@ -55,8 +55,17 @@ puts "=========================================================\n"
 
 copy_static_file 'Gemfile' 
 apply "#{@partials}/_git.rb"
-apply "#{@partials}/_rvm.rb" 
-# apply jquery
-run "rails g jquery:install"
+apply "#{@partials}/_rvm.rb"      
+
+# apply jquery   
+puts "applying jquery".yellow
+yes? "Continue?"
+generate 'jquery:install'    
+#run "rails g jquery:install" 
+yes? "Continue?" 
+
 apply "#{@partials}/_boilerplate.rb"    
-apply "#{@partials}/_replace_files.rb" 
+apply "#{@partials}/_replace_files.rb"     
+
+route "root :to => 'pages#home'"     
+remove_file 'public/index.html'

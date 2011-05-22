@@ -13,6 +13,9 @@ gem 'haml-rails'
 gem 'compass'    
 gem 'html5-boilerplate'  
 gem 'barista'
+
+gem 'multimarkdown'
+gem 'kramdown'
 # gem 'devise'   
 # gem "oa-oauth", :require => "omniauth/oauth"
 

@@ -1,0 +1,5 @@
+# TODO #
+
+*	Add generators "strategies"
+	*	Run generators like compass and jquery after bundle installs
+	*	Run RSpec generators on complete

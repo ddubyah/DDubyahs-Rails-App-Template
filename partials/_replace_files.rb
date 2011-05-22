@@ -6,7 +6,8 @@ puts "Replacing app files"
 directory File.join(@static_files, 'app'), "app"
 
 puts "Replacing public files"
-directory File.join(@static_files, 'public'), "public"
+directory File.join(@static_files, 'public'), "public"  
+
 
 # def file_is_child?(parent_dir, dir_entry)
 # 	File.path(dir_entry) =~ Regexp.new("\A#{parent_dir.path}")
